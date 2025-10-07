@@ -1,7 +1,23 @@
 alert('Boas Vindas ao jogo do número secreto!!!');
-let numeroSecreto = 29;
-let chute = prompt('Escolha um número entre 0 e 1000')
+let numeroSecreto = 45;
+console.log(numeroSecreto);
+let chute;
+let tentativas = 1;
 
-if (chute == numeroSecreto) {
-    console.log('Isso ai! Você descobriu o número secreto (29)')
+
+//enquanto o chute não for igual ao numero secreto (A palavra while significa enquanto, conhecido como loop)
+while (chute != numeroSecreto) {
+    chute = prompt('Escolha um número entre 1 e 10');
+    // se chute for igual ao número secreto
+    if (chute == numeroSecreto) {
+        alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas!!!`);
+    } else {
+        if (chute > numeroSecreto) {
+            alert(`O número secreto é menor que ${chute}`);
+        } else {
+            alert(`0 número secreto é maior que ${chute}`);
+        }
+        tentativas++;
+    }
 }
+
